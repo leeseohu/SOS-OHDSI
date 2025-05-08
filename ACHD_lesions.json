@@ -1,0 +1,2330 @@
+{
+  "id": 104,
+  "name": "ACHD_lesions",
+  "cohorts": [
+    {
+      "id": 401,
+      "name": "11.\tSinus Venosus020725",
+      "expression": {
+        "cdmVersionRange": ">=5.0.0",
+        "PrimaryCriteria": {
+          "CriteriaList": [
+            {
+              "VisitOccurrence": {
+                "VisitTypeExclude": false,
+                "Age": {
+                  "Value": 18,
+                  "Op": "gte"
+                }
+              }
+            }
+          ],
+          "ObservationWindow": {
+            "PriorDays": 0,
+            "PostDays": 0
+          },
+          "PrimaryCriteriaLimit": {
+            "Type": "All"
+          }
+        },
+        "ConceptSets": [
+          {
+            "id": 0,
+            "name": "11. Sinus venosus",
+            "expression": {
+              "items": [
+                {
+                  "concept": {
+                    "CONCEPT_ID": 4316879,
+                    "CONCEPT_NAME": "Sinus venosus atrial septal defect",
+                    "STANDARD_CONCEPT": "S",
+                    "STANDARD_CONCEPT_CAPTION": "Standard",
+                    "INVALID_REASON": "V",
+                    "INVALID_REASON_CAPTION": "Valid",
+                    "CONCEPT_CODE": "95268002",
+                    "DOMAIN_ID": "Condition",
+                    "VOCABULARY_ID": "SNOMED",
+                    "CONCEPT_CLASS_ID": "Disorder"
+                  },
+                  "isExcluded": false,
+                  "includeDescendants": false,
+                  "includeMapped": false
+                }
+              ]
+            }
+          },
+          {
+            "id": 1,
+            "name": "ACHD_SinusVenosus_020725",
+            "expression": {
+              "items": [
+                {
+                  "concept": {
+                    "CONCEPT_ID": 37402964,
+                    "CONCEPT_NAME": "Sinus venosus atrial septal defect, unspecified",
+                    "STANDARD_CONCEPT": "N",
+                    "STANDARD_CONCEPT_CAPTION": "Non-Standard",
+                    "INVALID_REASON": "V",
+                    "INVALID_REASON_CAPTION": "Valid",
+                    "CONCEPT_CODE": "Q21.16",
+                    "DOMAIN_ID": "Condition",
+                    "VOCABULARY_ID": "ICD10CM",
+                    "CONCEPT_CLASS_ID": "5-char billing code"
+                  },
+                  "isExcluded": false,
+                  "includeDescendants": false,
+                  "includeMapped": true
+                },
+                {
+                  "concept": {
+                    "CONCEPT_ID": 4316879,
+                    "CONCEPT_NAME": "Sinus venosus atrial septal defect",
+                    "STANDARD_CONCEPT": "S",
+                    "STANDARD_CONCEPT_CAPTION": "Standard",
+                    "INVALID_REASON": "V",
+                    "INVALID_REASON_CAPTION": "Valid",
+                    "CONCEPT_CODE": "95268002",
+                    "DOMAIN_ID": "Condition",
+                    "VOCABULARY_ID": "SNOMED",
+                    "CONCEPT_CLASS_ID": "Disorder"
+                  },
+                  "isExcluded": false,
+                  "includeDescendants": false,
+                  "includeMapped": true
+                }
+              ]
+            }
+          }
+        ],
+        "QualifiedLimit": {
+          "Type": "First"
+        },
+        "ExpressionLimit": {
+          "Type": "All"
+        },
+        "InclusionRules": [
+          {
+            "name": "11.\tSinus Venosus",
+            "expression": {
+              "Type": "ANY",
+              "CriteriaList": [
+                {
+                  "Criteria": {
+                    "ConditionOccurrence": {
+                      "CodesetId": 1
+                    }
+                  },
+                  "StartWindow": {
+                    "Start": {
+                      "Coeff": -1
+                    },
+                    "End": {
+                      "Coeff": 1
+                    },
+                    "UseIndexEnd": false,
+                    "UseEventEnd": false
+                  },
+                  "RestrictVisit": false,
+                  "IgnoreObservationPeriod": false,
+                  "Occurrence": {
+                    "Type": 2,
+                    "Count": 1,
+                    "IsDistinct": false
+                  }
+                }
+              ],
+              "DemographicCriteriaList": [],
+              "Groups": []
+            }
+          }
+        ],
+        "CensoringCriteria": [],
+        "CollapseSettings": {
+          "CollapseType": "ERA",
+          "EraPad": 0
+        },
+        "CensorWindow": {}
+      }
+    },
+    {
+      "id": 686,
+      "name": "1. Eisenmenger Syndrome-Shunt with pulmonary hypertension 021025",
+      "expression": {
+        "cdmVersionRange": ">=5.0.0",
+        "PrimaryCriteria": {
+          "CriteriaList": [
+            {
+              "VisitOccurrence": {
+                "VisitTypeExclude": false,
+                "Age": {
+                  "Value": 18,
+                  "Op": "gte"
+                }
+              }
+            }
+          ],
+          "ObservationWindow": {
+            "PriorDays": 0,
+            "PostDays": 0
+          },
+          "PrimaryCriteriaLimit": {
+            "Type": "All"
+          }
+        },
+        "ConceptSets": [
+          {
+            "id": 0,
+            "name": "I27.2_021025",
+            "expression": {
+              "items": [
+                {
+                  "concept": {
+                    "CONCEPT_ID": 35207709,
+                    "CONCEPT_NAME": "Other secondary pulmonary hypertension",
+                    "STANDARD_CONCEPT": "N",
+                    "STANDARD_CONCEPT_CAPTION": "Non-Standard",
+                    "INVALID_REASON": "V",
+                    "INVALID_REASON_CAPTION": "Valid",
+                    "CONCEPT_CODE": "I27.2",
+                    "DOMAIN_ID": "Condition",
+                    "VOCABULARY_ID": "ICD10CM",
+                    "CONCEPT_CLASS_ID": "4-char nonbill code"
+                  },
+                  "isExcluded": false,
+                  "includeDescendants": false,
+                  "includeMapped": true
+                },
+                {
+                  "concept": {
+                    "CONCEPT_ID": 4339214,
+                    "CONCEPT_NAME": "Secondary pulmonary hypertension",
+                    "STANDARD_CONCEPT": "S",
+                    "STANDARD_CONCEPT_CAPTION": "Standard",
+                    "INVALID_REASON": "V",
+                    "INVALID_REASON_CAPTION": "Valid",
+                    "CONCEPT_CODE": "88223008",
+                    "DOMAIN_ID": "Condition",
+                    "VOCABULARY_ID": "SNOMED",
+                    "CONCEPT_CLASS_ID": "Disorder"
+                  },
+                  "isExcluded": false,
+                  "includeDescendants": false,
+                  "includeMapped": true
+                }
+              ]
+            }
+          },
+          {
+            "id": 1,
+            "name": "(Q21.0 and/or Q21.1 and/or Q21.2 and/or Q25.0 and/or Q26.2 and/or Q21.4)_021025",
+            "expression": {
+              "items": [
+                {
+                  "concept": {
+                    "CONCEPT_ID": 35210804,
+                    "CONCEPT_NAME": "Aortopulmonary septal defect",
+                    "STANDARD_CONCEPT": "N",
+                    "STANDARD_CONCEPT_CAPTION": "Non-Standard",
+                    "INVALID_REASON": "V",
+                    "INVALID_REASON_CAPTION": "Valid",
+                    "CONCEPT_CODE": "Q21.4",
+                    "DOMAIN_ID": "Condition",
+                    "VOCABULARY_ID": "ICD10CM",
+                    "CONCEPT_CLASS_ID": "4-char billing code"
+                  },
+                  "isExcluded": false,
+                  "includeDescendants": false,
+                  "includeMapped": true
+                },
+                {
+                  "concept": {
+                    "CONCEPT_ID": 35210801,
+                    "CONCEPT_NAME": "Atrial septal defect",
+                    "STANDARD_CONCEPT": "N",
+                    "STANDARD_CONCEPT_CAPTION": "Non-Standard",
+                    "INVALID_REASON": "V",
+                    "INVALID_REASON_CAPTION": "Valid",
+                    "CONCEPT_CODE": "Q21.1",
+                    "DOMAIN_ID": "Condition",
+                    "VOCABULARY_ID": "ICD10CM",
+                    "CONCEPT_CLASS_ID": "4-char nonbill code"
+                  },
+                  "isExcluded": false,
+                  "includeDescendants": false,
+                  "includeMapped": true
+                },
+                {
+                  "concept": {
+                    "CONCEPT_ID": 35210802,
+                    "CONCEPT_NAME": "Atrioventricular septal defect",
+                    "STANDARD_CONCEPT": "N",
+                    "STANDARD_CONCEPT_CAPTION": "Non-Standard",
+                    "INVALID_REASON": "V",
+                    "INVALID_REASON_CAPTION": "Valid",
+                    "CONCEPT_CODE": "Q21.2",
+                    "DOMAIN_ID": "Condition",
+                    "VOCABULARY_ID": "ICD10CM",
+                    "CONCEPT_CLASS_ID": "4-char nonbill code"
+                  },
+                  "isExcluded": false,
+                  "includeDescendants": false,
+                  "includeMapped": true
+                },
+                {
+                  "concept": {
+                    "CONCEPT_ID": 35210832,
+                    "CONCEPT_NAME": "Patent ductus arteriosus",
+                    "STANDARD_CONCEPT": "N",
+                    "STANDARD_CONCEPT_CAPTION": "Non-Standard",
+                    "INVALID_REASON": "V",
+                    "INVALID_REASON_CAPTION": "Valid",
+                    "CONCEPT_CODE": "Q25.0",
+                    "DOMAIN_ID": "Condition",
+                    "VOCABULARY_ID": "ICD10CM",
+                    "CONCEPT_CLASS_ID": "4-char billing code"
+                  },
+                  "isExcluded": false,
+                  "includeDescendants": false,
+                  "includeMapped": true
+                },
+                {
+                  "concept": {
+                    "CONCEPT_ID": 35210844,
+                    "CONCEPT_NAME": "Total anomalous pulmonary venous connection",
+                    "STANDARD_CONCEPT": "N",
+                    "STANDARD_CONCEPT_CAPTION": "Non-Standard",
+                    "INVALID_REASON": "V",
+                    "INVALID_REASON_CAPTION": "Valid",
+                    "CONCEPT_CODE": "Q26.2",
+                    "DOMAIN_ID": "Condition",
+                    "VOCABULARY_ID": "ICD10CM",
+                    "CONCEPT_CLASS_ID": "4-char billing code"
+                  },
+                  "isExcluded": false,
+                  "includeDescendants": false,
+                  "includeMapped": true
+                },
+                {
+                  "concept": {
+                    "CONCEPT_ID": 35210800,
+                    "CONCEPT_NAME": "Ventricular septal defect",
+                    "STANDARD_CONCEPT": "N",
+                    "STANDARD_CONCEPT_CAPTION": "Non-Standard",
+                    "INVALID_REASON": "V",
+                    "INVALID_REASON_CAPTION": "Valid",
+                    "CONCEPT_CODE": "Q21.0",
+                    "DOMAIN_ID": "Condition",
+                    "VOCABULARY_ID": "ICD10CM",
+                    "CONCEPT_CLASS_ID": "4-char billing code"
+                  },
+                  "isExcluded": false,
+                  "includeDescendants": false,
+                  "includeMapped": true
+                },
+                {
+                  "concept": {
+                    "CONCEPT_ID": 4061819,
+                    "CONCEPT_NAME": "Aortopulmonary window",
+                    "STANDARD_CONCEPT": "S",
+                    "STANDARD_CONCEPT_CAPTION": "Standard",
+                    "INVALID_REASON": "V",
+                    "INVALID_REASON_CAPTION": "Valid",
+                    "CONCEPT_CODE": "17024001",
+                    "DOMAIN_ID": "Condition",
+                    "VOCABULARY_ID": "SNOMED",
+                    "CONCEPT_CLASS_ID": "Disorder"
+                  },
+                  "isExcluded": false,
+                  "includeDescendants": false,
+                  "includeMapped": true
+                },
+                {
+                  "concept": {
+                    "CONCEPT_ID": 4289309,
+                    "CONCEPT_NAME": "Atrial septal defect",
+                    "STANDARD_CONCEPT": "S",
+                    "STANDARD_CONCEPT_CAPTION": "Standard",
+                    "INVALID_REASON": "V",
+                    "INVALID_REASON_CAPTION": "Valid",
+                    "CONCEPT_CODE": "70142008",
+                    "DOMAIN_ID": "Condition",
+                    "VOCABULARY_ID": "SNOMED",
+                    "CONCEPT_CLASS_ID": "Disorder"
+                  },
+                  "isExcluded": false,
+                  "includeDescendants": false,
+                  "includeMapped": true
+                },
+                {
+                  "concept": {
+                    "CONCEPT_ID": 4100152,
+                    "CONCEPT_NAME": "Atrioventricular septal defect and common atrioventricular junction",
+                    "STANDARD_CONCEPT": "S",
+                    "STANDARD_CONCEPT_CAPTION": "Standard",
+                    "INVALID_REASON": "V",
+                    "INVALID_REASON_CAPTION": "Valid",
+                    "CONCEPT_CODE": "253414002",
+                    "DOMAIN_ID": "Condition",
+                    "VOCABULARY_ID": "SNOMED",
+                    "CONCEPT_CLASS_ID": "Disorder"
+                  },
+                  "isExcluded": false,
+                  "includeDescendants": false,
+                  "includeMapped": true
+                },
+                {
+                  "concept": {
+                    "CONCEPT_ID": 315922,
+                    "CONCEPT_NAME": "Patent ductus arteriosus",
+                    "STANDARD_CONCEPT": "S",
+                    "STANDARD_CONCEPT_CAPTION": "Standard",
+                    "INVALID_REASON": "V",
+                    "INVALID_REASON_CAPTION": "Valid",
+                    "CONCEPT_CODE": "83330001",
+                    "DOMAIN_ID": "Condition",
+                    "VOCABULARY_ID": "SNOMED",
+                    "CONCEPT_CLASS_ID": "Disorder"
+                  },
+                  "isExcluded": false,
+                  "includeDescendants": false,
+                  "includeMapped": true
+                },
+                {
+                  "concept": {
+                    "CONCEPT_ID": 432432,
+                    "CONCEPT_NAME": "Total anomalous pulmonary venous return",
+                    "STANDARD_CONCEPT": "S",
+                    "STANDARD_CONCEPT_CAPTION": "Standard",
+                    "INVALID_REASON": "V",
+                    "INVALID_REASON_CAPTION": "Valid",
+                    "CONCEPT_CODE": "111323005",
+                    "DOMAIN_ID": "Condition",
+                    "VOCABULARY_ID": "SNOMED",
+                    "CONCEPT_CLASS_ID": "Disorder"
+                  },
+                  "isExcluded": false,
+                  "includeDescendants": false,
+                  "includeMapped": true
+                },
+                {
+                  "concept": {
+                    "CONCEPT_ID": 434462,
+                    "CONCEPT_NAME": "Ventricular septal defect",
+                    "STANDARD_CONCEPT": "S",
+                    "STANDARD_CONCEPT_CAPTION": "Standard",
+                    "INVALID_REASON": "V",
+                    "INVALID_REASON_CAPTION": "Valid",
+                    "CONCEPT_CODE": "30288003",
+                    "DOMAIN_ID": "Condition",
+                    "VOCABULARY_ID": "SNOMED",
+                    "CONCEPT_CLASS_ID": "Disorder"
+                  },
+                  "isExcluded": false,
+                  "includeDescendants": false,
+                  "includeMapped": true
+                }
+              ]
+            }
+          }
+        ],
+        "QualifiedLimit": {
+          "Type": "First"
+        },
+        "ExpressionLimit": {
+          "Type": "All"
+        },
+        "InclusionRules": [
+          {
+            "name": "1. Eisenmenger Syndrome-Shunt with pulmonary hypertension",
+            "expression": {
+              "Type": "ALL",
+              "CriteriaList": [
+                {
+                  "Criteria": {
+                    "ConditionOccurrence": {
+                      "CodesetId": 1
+                    }
+                  },
+                  "StartWindow": {
+                    "Start": {
+                      "Coeff": -1
+                    },
+                    "End": {
+                      "Coeff": 1
+                    },
+                    "UseIndexEnd": false,
+                    "UseEventEnd": false
+                  },
+                  "RestrictVisit": false,
+                  "IgnoreObservationPeriod": false,
+                  "Occurrence": {
+                    "Type": 2,
+                    "Count": 1,
+                    "IsDistinct": false
+                  }
+                },
+                {
+                  "Criteria": {
+                    "ConditionOccurrence": {
+                      "CodesetId": 0
+                    }
+                  },
+                  "StartWindow": {
+                    "Start": {
+                      "Coeff": -1
+                    },
+                    "End": {
+                      "Coeff": 1
+                    },
+                    "UseIndexEnd": false,
+                    "UseEventEnd": false
+                  },
+                  "RestrictVisit": false,
+                  "IgnoreObservationPeriod": false,
+                  "Occurrence": {
+                    "Type": 2,
+                    "Count": 1,
+                    "IsDistinct": false
+                  }
+                }
+              ],
+              "DemographicCriteriaList": [],
+              "Groups": []
+            }
+          }
+        ],
+        "CensoringCriteria": [],
+        "CollapseSettings": {
+          "CollapseType": "ERA",
+          "EraPad": 0
+        },
+        "CensorWindow": {}
+      }
+    },
+    {
+      "id": 687,
+      "name": "2. Fontan,Glenn 021025",
+      "expression": {
+        "cdmVersionRange": ">=5.0.0",
+        "PrimaryCriteria": {
+          "CriteriaList": [
+            {
+              "VisitOccurrence": {
+                "VisitTypeExclude": false,
+                "Age": {
+                  "Value": 18,
+                  "Op": "gte"
+                }
+              }
+            }
+          ],
+          "ObservationWindow": {
+            "PriorDays": 0,
+            "PostDays": 0
+          },
+          "PrimaryCriteriaLimit": {
+            "Type": "All"
+          }
+        },
+        "ConceptSets": [
+          {
+            "id": 0,
+            "name": "33766 or 33767",
+            "expression": {
+              "items": [
+                {
+                  "concept": {
+                    "CONCEPT_ID": 2107355,
+                    "CONCEPT_NAME": "Shunt; superior vena cava to pulmonary artery for flow to 1 lung (classical Glenn procedure)",
+                    "STANDARD_CONCEPT": "N",
+                    "STANDARD_CONCEPT_CAPTION": "Non-Standard",
+                    "INVALID_REASON": "V",
+                    "INVALID_REASON_CAPTION": "Valid",
+                    "CONCEPT_CODE": "33766",
+                    "DOMAIN_ID": "Procedure",
+                    "VOCABULARY_ID": "CPT4",
+                    "CONCEPT_CLASS_ID": "CPT4"
+                  },
+                  "isExcluded": false,
+                  "includeDescendants": false,
+                  "includeMapped": true
+                },
+                {
+                  "concept": {
+                    "CONCEPT_ID": 2107356,
+                    "CONCEPT_NAME": "Shunt; superior vena cava to pulmonary artery for flow to both lungs (bidirectional Glenn procedure)",
+                    "STANDARD_CONCEPT": "N",
+                    "STANDARD_CONCEPT_CAPTION": "Non-Standard",
+                    "INVALID_REASON": "V",
+                    "INVALID_REASON_CAPTION": "Valid",
+                    "CONCEPT_CODE": "33767",
+                    "DOMAIN_ID": "Procedure",
+                    "VOCABULARY_ID": "CPT4",
+                    "CONCEPT_CLASS_ID": "CPT4"
+                  },
+                  "isExcluded": false,
+                  "includeDescendants": false,
+                  "includeMapped": true
+                },
+                {
+                  "concept": {
+                    "CONCEPT_ID": 40491942,
+                    "CONCEPT_NAME": "Bidirectional superior cavopulmonary anastomosis",
+                    "STANDARD_CONCEPT": "S",
+                    "STANDARD_CONCEPT_CAPTION": "Standard",
+                    "INVALID_REASON": "V",
+                    "INVALID_REASON_CAPTION": "Valid",
+                    "CONCEPT_CODE": "448797001",
+                    "DOMAIN_ID": "Procedure",
+                    "VOCABULARY_ID": "SNOMED",
+                    "CONCEPT_CLASS_ID": "Procedure"
+                  },
+                  "isExcluded": false,
+                  "includeDescendants": false,
+                  "includeMapped": true
+                },
+                {
+                  "concept": {
+                    "CONCEPT_ID": 4051948,
+                    "CONCEPT_NAME": "Classical Glenn shunt",
+                    "STANDARD_CONCEPT": "S",
+                    "STANDARD_CONCEPT_CAPTION": "Standard",
+                    "INVALID_REASON": "V",
+                    "INVALID_REASON_CAPTION": "Valid",
+                    "CONCEPT_CODE": "233228000",
+                    "DOMAIN_ID": "Procedure",
+                    "VOCABULARY_ID": "SNOMED",
+                    "CONCEPT_CLASS_ID": "Procedure"
+                  },
+                  "isExcluded": false,
+                  "includeDescendants": false,
+                  "includeMapped": true
+                }
+              ]
+            }
+          },
+          {
+            "id": 1,
+            "name": "33615 or 33617 or 33619",
+            "expression": {
+              "items": [
+                {
+                  "concept": {
+                    "CONCEPT_ID": 2107269,
+                    "CONCEPT_NAME": "Repair of complex cardiac anomalies (eg, single ventricle) by modified Fontan procedure",
+                    "STANDARD_CONCEPT": "S",
+                    "STANDARD_CONCEPT_CAPTION": "Standard",
+                    "INVALID_REASON": "V",
+                    "INVALID_REASON_CAPTION": "Valid",
+                    "CONCEPT_CODE": "33617",
+                    "DOMAIN_ID": "Procedure",
+                    "VOCABULARY_ID": "CPT4",
+                    "CONCEPT_CLASS_ID": "CPT4"
+                  },
+                  "isExcluded": false,
+                  "includeDescendants": false,
+                  "includeMapped": true
+                },
+                {
+                  "concept": {
+                    "CONCEPT_ID": 2107268,
+                    "CONCEPT_NAME": "Repair of complex cardiac anomalies (eg, tricuspid atresia) by closure of atrial septal defect and anastomosis of atria or vena cava to pulmonary artery (simple Fontan procedure)",
+                    "STANDARD_CONCEPT": "S",
+                    "STANDARD_CONCEPT_CAPTION": "Standard",
+                    "INVALID_REASON": "V",
+                    "INVALID_REASON_CAPTION": "Valid",
+                    "CONCEPT_CODE": "33615",
+                    "DOMAIN_ID": "Procedure",
+                    "VOCABULARY_ID": "CPT4",
+                    "CONCEPT_CLASS_ID": "CPT4"
+                  },
+                  "isExcluded": false,
+                  "includeDescendants": false,
+                  "includeMapped": true
+                },
+                {
+                  "concept": {
+                    "CONCEPT_ID": 2107270,
+                    "CONCEPT_NAME": "Repair of single ventricle with aortic outflow obstruction and aortic arch hypoplasia (hypoplastic left heart syndrome) (eg, Norwood procedure)",
+                    "STANDARD_CONCEPT": "S",
+                    "STANDARD_CONCEPT_CAPTION": "Standard",
+                    "INVALID_REASON": "V",
+                    "INVALID_REASON_CAPTION": "Valid",
+                    "CONCEPT_CODE": "33619",
+                    "DOMAIN_ID": "Procedure",
+                    "VOCABULARY_ID": "CPT4",
+                    "CONCEPT_CLASS_ID": "CPT4"
+                  },
+                  "isExcluded": false,
+                  "includeDescendants": false,
+                  "includeMapped": true
+                }
+              ]
+            }
+          },
+          {
+            "id": 2,
+            "name": "Q22.5",
+            "expression": {
+              "items": [
+                {
+                  "concept": {
+                    "CONCEPT_ID": 35210812,
+                    "CONCEPT_NAME": "Ebstein's anomaly",
+                    "STANDARD_CONCEPT": "N",
+                    "STANDARD_CONCEPT_CAPTION": "Non-Standard",
+                    "INVALID_REASON": "V",
+                    "INVALID_REASON_CAPTION": "Valid",
+                    "CONCEPT_CODE": "Q22.5",
+                    "DOMAIN_ID": "Condition",
+                    "VOCABULARY_ID": "ICD10CM",
+                    "CONCEPT_CLASS_ID": "4-char billing code"
+                  },
+                  "isExcluded": false,
+                  "includeDescendants": false,
+                  "includeMapped": true
+                },
+                {
+                  "concept": {
+                    "CONCEPT_ID": 4069182,
+                    "CONCEPT_NAME": "Ebstein's anomaly",
+                    "STANDARD_CONCEPT": "S",
+                    "STANDARD_CONCEPT_CAPTION": "Standard",
+                    "INVALID_REASON": "V",
+                    "INVALID_REASON_CAPTION": "Valid",
+                    "CONCEPT_CODE": "204357006",
+                    "DOMAIN_ID": "Condition",
+                    "VOCABULARY_ID": "SNOMED",
+                    "CONCEPT_CLASS_ID": "Disorder"
+                  },
+                  "isExcluded": false,
+                  "includeDescendants": false,
+                  "includeMapped": true
+                }
+              ]
+            }
+          }
+        ],
+        "QualifiedLimit": {
+          "Type": "First"
+        },
+        "ExpressionLimit": {
+          "Type": "All"
+        },
+        "InclusionRules": [
+          {
+            "name": "2. Fontan,Glenn",
+            "expression": {
+              "Type": "ANY",
+              "CriteriaList": [
+                {
+                  "Criteria": {
+                    "ConditionOccurrence": {
+                      "CodesetId": 1
+                    }
+                  },
+                  "StartWindow": {
+                    "Start": {
+                      "Coeff": -1
+                    },
+                    "End": {
+                      "Coeff": 1
+                    },
+                    "UseIndexEnd": false,
+                    "UseEventEnd": false
+                  },
+                  "RestrictVisit": false,
+                  "IgnoreObservationPeriod": false,
+                  "Occurrence": {
+                    "Type": 2,
+                    "Count": 1,
+                    "IsDistinct": false
+                  }
+                },
+                {
+                  "Criteria": {
+                    "ConditionOccurrence": {
+                      "CorrelatedCriteria": {
+                        "Type": "ALL",
+                        "CriteriaList": [
+                          {
+                            "Criteria": {
+                              "ConditionOccurrence": {
+                                "CodesetId": 2
+                              }
+                            },
+                            "StartWindow": {
+                              "Start": {
+                                "Coeff": -1
+                              },
+                              "End": {
+                                "Coeff": 1
+                              },
+                              "UseIndexEnd": false,
+                              "UseEventEnd": false
+                            },
+                            "RestrictVisit": false,
+                            "IgnoreObservationPeriod": false,
+                            "Occurrence": {
+                              "Type": 0,
+                              "Count": 0,
+                              "IsDistinct": false
+                            }
+                          }
+                        ],
+                        "DemographicCriteriaList": [],
+                        "Groups": []
+                      },
+                      "CodesetId": 0
+                    }
+                  },
+                  "StartWindow": {
+                    "Start": {
+                      "Coeff": -1
+                    },
+                    "End": {
+                      "Coeff": 1
+                    },
+                    "UseIndexEnd": false,
+                    "UseEventEnd": false
+                  },
+                  "RestrictVisit": false,
+                  "IgnoreObservationPeriod": false,
+                  "Occurrence": {
+                    "Type": 2,
+                    "Count": 1,
+                    "IsDistinct": false
+                  }
+                }
+              ],
+              "DemographicCriteriaList": [],
+              "Groups": []
+            }
+          }
+        ],
+        "CensoringCriteria": [],
+        "CollapseSettings": {
+          "CollapseType": "ERA",
+          "EraPad": 0
+        },
+        "CensorWindow": {}
+      }
+    },
+    {
+      "id": 688,
+      "name": "3. D-Transposition of the great arteries with atrial switch 021025",
+      "expression": {
+        "cdmVersionRange": ">=5.0.0",
+        "PrimaryCriteria": {
+          "CriteriaList": [
+            {
+              "VisitOccurrence": {
+                "VisitTypeExclude": false,
+                "Age": {
+                  "Value": 18,
+                  "Op": "gte"
+                }
+              }
+            }
+          ],
+          "ObservationWindow": {
+            "PriorDays": 0,
+            "PostDays": 0
+          },
+          "PrimaryCriteriaLimit": {
+            "Type": "All"
+          }
+        },
+        "ConceptSets": [
+          {
+            "id": 0,
+            "name": "CPT 33774 or 33767",
+            "expression": {
+              "items": [
+                {
+                  "concept": {
+                    "CONCEPT_ID": 2107361,
+                    "CONCEPT_NAME": "Repair of transposition of the great arteries, atrial baffle procedure (eg, Mustard or Senning type) with cardiopulmonary bypass",
+                    "STANDARD_CONCEPT": "S",
+                    "STANDARD_CONCEPT_CAPTION": "Standard",
+                    "INVALID_REASON": "V",
+                    "INVALID_REASON_CAPTION": "Valid",
+                    "CONCEPT_CODE": "33774",
+                    "DOMAIN_ID": "Procedure",
+                    "VOCABULARY_ID": "CPT4",
+                    "CONCEPT_CLASS_ID": "CPT4"
+                  },
+                  "isExcluded": false,
+                  "includeDescendants": false,
+                  "includeMapped": true
+                },
+                {
+                  "concept": {
+                    "CONCEPT_ID": 2107356,
+                    "CONCEPT_NAME": "Shunt; superior vena cava to pulmonary artery for flow to both lungs (bidirectional Glenn procedure)",
+                    "STANDARD_CONCEPT": "N",
+                    "STANDARD_CONCEPT_CAPTION": "Non-Standard",
+                    "INVALID_REASON": "V",
+                    "INVALID_REASON_CAPTION": "Valid",
+                    "CONCEPT_CODE": "33767",
+                    "DOMAIN_ID": "Procedure",
+                    "VOCABULARY_ID": "CPT4",
+                    "CONCEPT_CLASS_ID": "CPT4"
+                  },
+                  "isExcluded": false,
+                  "includeDescendants": false,
+                  "includeMapped": true
+                },
+                {
+                  "concept": {
+                    "CONCEPT_ID": 40491942,
+                    "CONCEPT_NAME": "Bidirectional superior cavopulmonary anastomosis",
+                    "STANDARD_CONCEPT": "S",
+                    "STANDARD_CONCEPT_CAPTION": "Standard",
+                    "INVALID_REASON": "V",
+                    "INVALID_REASON_CAPTION": "Valid",
+                    "CONCEPT_CODE": "448797001",
+                    "DOMAIN_ID": "Procedure",
+                    "VOCABULARY_ID": "SNOMED",
+                    "CONCEPT_CLASS_ID": "Procedure"
+                  },
+                  "isExcluded": false,
+                  "includeDescendants": false,
+                  "includeMapped": true
+                }
+              ]
+            }
+          },
+          {
+            "id": 1,
+            "name": "Q20.3",
+            "expression": {
+              "items": [
+                {
+                  "concept": {
+                    "CONCEPT_ID": 35210794,
+                    "CONCEPT_NAME": "Discordant ventriculoarterial connection",
+                    "STANDARD_CONCEPT": "N",
+                    "STANDARD_CONCEPT_CAPTION": "Non-Standard",
+                    "INVALID_REASON": "V",
+                    "INVALID_REASON_CAPTION": "Valid",
+                    "CONCEPT_CODE": "Q20.3",
+                    "DOMAIN_ID": "Condition",
+                    "VOCABULARY_ID": "ICD10CM",
+                    "CONCEPT_CLASS_ID": "4-char billing code"
+                  },
+                  "isExcluded": false,
+                  "includeDescendants": false,
+                  "includeMapped": true
+                },
+                {
+                  "concept": {
+                    "CONCEPT_ID": 432431,
+                    "CONCEPT_NAME": "Discordant ventriculoarterial connection",
+                    "STANDARD_CONCEPT": "S",
+                    "STANDARD_CONCEPT_CAPTION": "Standard",
+                    "INVALID_REASON": "V",
+                    "INVALID_REASON_CAPTION": "Valid",
+                    "CONCEPT_CODE": "204296002",
+                    "DOMAIN_ID": "Condition",
+                    "VOCABULARY_ID": "SNOMED",
+                    "CONCEPT_CLASS_ID": "Disorder"
+                  },
+                  "isExcluded": false,
+                  "includeDescendants": false,
+                  "includeMapped": true
+                }
+              ]
+            }
+          }
+        ],
+        "QualifiedLimit": {
+          "Type": "First"
+        },
+        "ExpressionLimit": {
+          "Type": "All"
+        },
+        "InclusionRules": [
+          {
+            "name": "3. D-Transposition of the great arteries with atrial switch",
+            "expression": {
+              "Type": "ALL",
+              "CriteriaList": [
+                {
+                  "Criteria": {
+                    "ConditionOccurrence": {
+                      "CodesetId": 0
+                    }
+                  },
+                  "StartWindow": {
+                    "Start": {
+                      "Coeff": -1
+                    },
+                    "End": {
+                      "Coeff": 1
+                    },
+                    "UseIndexEnd": false,
+                    "UseEventEnd": false
+                  },
+                  "RestrictVisit": false,
+                  "IgnoreObservationPeriod": false,
+                  "Occurrence": {
+                    "Type": 2,
+                    "Count": 1,
+                    "IsDistinct": false
+                  }
+                },
+                {
+                  "Criteria": {
+                    "ConditionOccurrence": {
+                      "CodesetId": 1
+                    }
+                  },
+                  "StartWindow": {
+                    "Start": {
+                      "Coeff": -1
+                    },
+                    "End": {
+                      "Coeff": 1
+                    },
+                    "UseIndexEnd": false,
+                    "UseEventEnd": false
+                  },
+                  "RestrictVisit": false,
+                  "IgnoreObservationPeriod": false,
+                  "Occurrence": {
+                    "Type": 2,
+                    "Count": 1,
+                    "IsDistinct": false
+                  }
+                }
+              ],
+              "DemographicCriteriaList": [],
+              "Groups": []
+            }
+          }
+        ],
+        "CensoringCriteria": [],
+        "CollapseSettings": {
+          "CollapseType": "ERA",
+          "EraPad": 0
+        },
+        "CensorWindow": {}
+      }
+    },
+    {
+      "id": 689,
+      "name": "4. D-Transposition of the great arteries with arterial switch 021025",
+      "expression": {
+        "cdmVersionRange": ">=5.0.0",
+        "PrimaryCriteria": {
+          "CriteriaList": [
+            {
+              "VisitOccurrence": {
+                "VisitTypeExclude": false,
+                "Age": {
+                  "Value": 18,
+                  "Op": "gte"
+                }
+              }
+            }
+          ],
+          "ObservationWindow": {
+            "PriorDays": 0,
+            "PostDays": 0
+          },
+          "PrimaryCriteriaLimit": {
+            "Type": "All"
+          }
+        },
+        "ConceptSets": [
+          {
+            "id": 0,
+            "name": "CPT 33778 or 33780",
+            "expression": {
+              "items": [
+                {
+                  "concept": {
+                    "CONCEPT_ID": 2107375,
+                    "CONCEPT_NAME": "Repair of transposition of the great arteries, aortic pulmonary artery reconstruction (eg, Jatene type)",
+                    "STANDARD_CONCEPT": "S",
+                    "STANDARD_CONCEPT_CAPTION": "Standard",
+                    "INVALID_REASON": "V",
+                    "INVALID_REASON_CAPTION": "Valid",
+                    "CONCEPT_CODE": "33778",
+                    "DOMAIN_ID": "Procedure",
+                    "VOCABULARY_ID": "CPT4",
+                    "CONCEPT_CLASS_ID": "CPT4"
+                  },
+                  "isExcluded": false,
+                  "includeDescendants": false,
+                  "includeMapped": true
+                },
+                {
+                  "concept": {
+                    "CONCEPT_ID": 2107377,
+                    "CONCEPT_NAME": "Repair of transposition of the great arteries, aortic pulmonary artery reconstruction (eg, Jatene type); with closure of ventricular septal defect",
+                    "STANDARD_CONCEPT": "S",
+                    "STANDARD_CONCEPT_CAPTION": "Standard",
+                    "INVALID_REASON": "V",
+                    "INVALID_REASON_CAPTION": "Valid",
+                    "CONCEPT_CODE": "33780",
+                    "DOMAIN_ID": "Procedure",
+                    "VOCABULARY_ID": "CPT4",
+                    "CONCEPT_CLASS_ID": "CPT4"
+                  },
+                  "isExcluded": false,
+                  "includeDescendants": false,
+                  "includeMapped": true
+                }
+              ]
+            }
+          },
+          {
+            "id": 1,
+            "name": "Q20.3",
+            "expression": {
+              "items": [
+                {
+                  "concept": {
+                    "CONCEPT_ID": 35210794,
+                    "CONCEPT_NAME": "Discordant ventriculoarterial connection",
+                    "STANDARD_CONCEPT": "N",
+                    "STANDARD_CONCEPT_CAPTION": "Non-Standard",
+                    "INVALID_REASON": "V",
+                    "INVALID_REASON_CAPTION": "Valid",
+                    "CONCEPT_CODE": "Q20.3",
+                    "DOMAIN_ID": "Condition",
+                    "VOCABULARY_ID": "ICD10CM",
+                    "CONCEPT_CLASS_ID": "4-char billing code"
+                  },
+                  "isExcluded": false,
+                  "includeDescendants": false,
+                  "includeMapped": true
+                },
+                {
+                  "concept": {
+                    "CONCEPT_ID": 432431,
+                    "CONCEPT_NAME": "Discordant ventriculoarterial connection",
+                    "STANDARD_CONCEPT": "S",
+                    "STANDARD_CONCEPT_CAPTION": "Standard",
+                    "INVALID_REASON": "V",
+                    "INVALID_REASON_CAPTION": "Valid",
+                    "CONCEPT_CODE": "204296002",
+                    "DOMAIN_ID": "Condition",
+                    "VOCABULARY_ID": "SNOMED",
+                    "CONCEPT_CLASS_ID": "Disorder"
+                  },
+                  "isExcluded": false,
+                  "includeDescendants": false,
+                  "includeMapped": true
+                }
+              ]
+            }
+          }
+        ],
+        "QualifiedLimit": {
+          "Type": "First"
+        },
+        "ExpressionLimit": {
+          "Type": "All"
+        },
+        "InclusionRules": [
+          {
+            "name": "4. D-Transposition of the great arteries with arterial switch",
+            "expression": {
+              "Type": "ALL",
+              "CriteriaList": [
+                {
+                  "Criteria": {
+                    "ConditionOccurrence": {
+                      "CodesetId": 0
+                    }
+                  },
+                  "StartWindow": {
+                    "Start": {
+                      "Coeff": -1
+                    },
+                    "End": {
+                      "Coeff": 1
+                    },
+                    "UseIndexEnd": false,
+                    "UseEventEnd": false
+                  },
+                  "RestrictVisit": false,
+                  "IgnoreObservationPeriod": false,
+                  "Occurrence": {
+                    "Type": 2,
+                    "Count": 1,
+                    "IsDistinct": false
+                  }
+                },
+                {
+                  "Criteria": {
+                    "ConditionOccurrence": {
+                      "CodesetId": 1
+                    }
+                  },
+                  "StartWindow": {
+                    "Start": {
+                      "Coeff": -1
+                    },
+                    "End": {
+                      "Coeff": 1
+                    },
+                    "UseIndexEnd": false,
+                    "UseEventEnd": false
+                  },
+                  "RestrictVisit": false,
+                  "IgnoreObservationPeriod": false,
+                  "Occurrence": {
+                    "Type": 2,
+                    "Count": 1,
+                    "IsDistinct": false
+                  }
+                }
+              ],
+              "DemographicCriteriaList": [],
+              "Groups": []
+            }
+          }
+        ],
+        "CensoringCriteria": [],
+        "CollapseSettings": {
+          "CollapseType": "ERA",
+          "EraPad": 0
+        },
+        "CensorWindow": {}
+      }
+    },
+    {
+      "id": 690,
+      "name": "5. L-Transposition of the great arteries 021025",
+      "expression": {
+        "cdmVersionRange": ">=5.0.0",
+        "PrimaryCriteria": {
+          "CriteriaList": [
+            {
+              "VisitOccurrence": {
+                "VisitTypeExclude": false,
+                "Age": {
+                  "Value": 18,
+                  "Op": "gte"
+                }
+              }
+            }
+          ],
+          "ObservationWindow": {
+            "PriorDays": 0,
+            "PostDays": 0
+          },
+          "PrimaryCriteriaLimit": {
+            "Type": "All"
+          }
+        },
+        "ConceptSets": [
+          {
+            "id": 0,
+            "name": "Q20.5",
+            "expression": {
+              "items": [
+                {
+                  "concept": {
+                    "CONCEPT_ID": 35210796,
+                    "CONCEPT_NAME": "Discordant atrioventricular connection",
+                    "STANDARD_CONCEPT": "N",
+                    "STANDARD_CONCEPT_CAPTION": "Non-Standard",
+                    "INVALID_REASON": "V",
+                    "INVALID_REASON_CAPTION": "Valid",
+                    "CONCEPT_CODE": "Q20.5",
+                    "DOMAIN_ID": "Condition",
+                    "VOCABULARY_ID": "ICD10CM",
+                    "CONCEPT_CLASS_ID": "4-char billing code"
+                  },
+                  "isExcluded": false,
+                  "includeDescendants": false,
+                  "includeMapped": true
+                },
+                {
+                  "concept": {
+                    "CONCEPT_ID": 4100733,
+                    "CONCEPT_NAME": "Discordant atrioventricular connection",
+                    "STANDARD_CONCEPT": "S",
+                    "STANDARD_CONCEPT_CAPTION": "Standard",
+                    "INVALID_REASON": "V",
+                    "INVALID_REASON_CAPTION": "Valid",
+                    "CONCEPT_CODE": "253277003",
+                    "DOMAIN_ID": "Condition",
+                    "VOCABULARY_ID": "SNOMED",
+                    "CONCEPT_CLASS_ID": "Disorder"
+                  },
+                  "isExcluded": false,
+                  "includeDescendants": false,
+                  "includeMapped": true
+                }
+              ]
+            }
+          },
+          {
+            "id": 1,
+            "name": "Q20.3",
+            "expression": {
+              "items": [
+                {
+                  "concept": {
+                    "CONCEPT_ID": 35210794,
+                    "CONCEPT_NAME": "Discordant ventriculoarterial connection",
+                    "STANDARD_CONCEPT": "N",
+                    "STANDARD_CONCEPT_CAPTION": "Non-Standard",
+                    "INVALID_REASON": "V",
+                    "INVALID_REASON_CAPTION": "Valid",
+                    "CONCEPT_CODE": "Q20.3",
+                    "DOMAIN_ID": "Condition",
+                    "VOCABULARY_ID": "ICD10CM",
+                    "CONCEPT_CLASS_ID": "4-char billing code"
+                  },
+                  "isExcluded": false,
+                  "includeDescendants": false,
+                  "includeMapped": true
+                },
+                {
+                  "concept": {
+                    "CONCEPT_ID": 432431,
+                    "CONCEPT_NAME": "Discordant ventriculoarterial connection",
+                    "STANDARD_CONCEPT": "S",
+                    "STANDARD_CONCEPT_CAPTION": "Standard",
+                    "INVALID_REASON": "V",
+                    "INVALID_REASON_CAPTION": "Valid",
+                    "CONCEPT_CODE": "204296002",
+                    "DOMAIN_ID": "Condition",
+                    "VOCABULARY_ID": "SNOMED",
+                    "CONCEPT_CLASS_ID": "Disorder"
+                  },
+                  "isExcluded": false,
+                  "includeDescendants": false,
+                  "includeMapped": true
+                }
+              ]
+            }
+          }
+        ],
+        "QualifiedLimit": {
+          "Type": "First"
+        },
+        "ExpressionLimit": {
+          "Type": "All"
+        },
+        "InclusionRules": [
+          {
+            "name": "5. L-Transposition of the great arteries ",
+            "expression": {
+              "Type": "ALL",
+              "CriteriaList": [
+                {
+                  "Criteria": {
+                    "ConditionOccurrence": {
+                      "CodesetId": 0
+                    }
+                  },
+                  "StartWindow": {
+                    "Start": {
+                      "Coeff": -1
+                    },
+                    "End": {
+                      "Coeff": 1
+                    },
+                    "UseIndexEnd": false,
+                    "UseEventEnd": false
+                  },
+                  "RestrictVisit": false,
+                  "IgnoreObservationPeriod": false,
+                  "Occurrence": {
+                    "Type": 2,
+                    "Count": 1,
+                    "IsDistinct": false
+                  }
+                },
+                {
+                  "Criteria": {
+                    "ConditionOccurrence": {
+                      "CodesetId": 1
+                    }
+                  },
+                  "StartWindow": {
+                    "Start": {
+                      "Coeff": -1
+                    },
+                    "End": {
+                      "Coeff": 1
+                    },
+                    "UseIndexEnd": false,
+                    "UseEventEnd": false
+                  },
+                  "RestrictVisit": false,
+                  "IgnoreObservationPeriod": false,
+                  "Occurrence": {
+                    "Type": 2,
+                    "Count": 1,
+                    "IsDistinct": false
+                  }
+                }
+              ],
+              "DemographicCriteriaList": [],
+              "Groups": []
+            }
+          }
+        ],
+        "CensoringCriteria": [],
+        "CollapseSettings": {
+          "CollapseType": "ERA",
+          "EraPad": 0
+        },
+        "CensorWindow": {}
+      }
+    },
+    {
+      "id": 691,
+      "name": "6. Tetralogy of Fallot, DORV TOF type 021025",
+      "expression": {
+        "cdmVersionRange": ">=5.0.0",
+        "PrimaryCriteria": {
+          "CriteriaList": [
+            {
+              "VisitOccurrence": {
+                "VisitTypeExclude": false,
+                "Age": {
+                  "Value": 18,
+                  "Op": "gte"
+                }
+              }
+            }
+          ],
+          "ObservationWindow": {
+            "PriorDays": 0,
+            "PostDays": 0
+          },
+          "PrimaryCriteriaLimit": {
+            "Type": "All"
+          }
+        },
+        "ConceptSets": [
+          {
+            "id": 0,
+            "name": "Q20.1",
+            "expression": {
+              "items": [
+                {
+                  "concept": {
+                    "CONCEPT_ID": 35210792,
+                    "CONCEPT_NAME": "Double outlet right ventricle",
+                    "STANDARD_CONCEPT": "N",
+                    "STANDARD_CONCEPT_CAPTION": "Non-Standard",
+                    "INVALID_REASON": "V",
+                    "INVALID_REASON_CAPTION": "Valid",
+                    "CONCEPT_CODE": "Q20.1",
+                    "DOMAIN_ID": "Condition",
+                    "VOCABULARY_ID": "ICD10CM",
+                    "CONCEPT_CLASS_ID": "4-char billing code"
+                  },
+                  "isExcluded": false,
+                  "includeDescendants": false,
+                  "includeMapped": true
+                },
+                {
+                  "concept": {
+                    "CONCEPT_ID": 313867,
+                    "CONCEPT_NAME": "Double outlet right ventricle",
+                    "STANDARD_CONCEPT": "S",
+                    "STANDARD_CONCEPT_CAPTION": "Standard",
+                    "INVALID_REASON": "V",
+                    "INVALID_REASON_CAPTION": "Valid",
+                    "CONCEPT_CODE": "7484005",
+                    "DOMAIN_ID": "Condition",
+                    "VOCABULARY_ID": "SNOMED",
+                    "CONCEPT_CLASS_ID": "Disorder"
+                  },
+                  "isExcluded": false,
+                  "includeDescendants": false,
+                  "includeMapped": true
+                }
+              ]
+            }
+          },
+          {
+            "id": 1,
+            "name": "Q20.3",
+            "expression": {
+              "items": [
+                {
+                  "concept": {
+                    "CONCEPT_ID": 35210794,
+                    "CONCEPT_NAME": "Discordant ventriculoarterial connection",
+                    "STANDARD_CONCEPT": "N",
+                    "STANDARD_CONCEPT_CAPTION": "Non-Standard",
+                    "INVALID_REASON": "V",
+                    "INVALID_REASON_CAPTION": "Valid",
+                    "CONCEPT_CODE": "Q20.3",
+                    "DOMAIN_ID": "Condition",
+                    "VOCABULARY_ID": "ICD10CM",
+                    "CONCEPT_CLASS_ID": "4-char billing code"
+                  },
+                  "isExcluded": false,
+                  "includeDescendants": false,
+                  "includeMapped": true
+                },
+                {
+                  "concept": {
+                    "CONCEPT_ID": 432431,
+                    "CONCEPT_NAME": "Discordant ventriculoarterial connection",
+                    "STANDARD_CONCEPT": "S",
+                    "STANDARD_CONCEPT_CAPTION": "Standard",
+                    "INVALID_REASON": "V",
+                    "INVALID_REASON_CAPTION": "Valid",
+                    "CONCEPT_CODE": "204296002",
+                    "DOMAIN_ID": "Condition",
+                    "VOCABULARY_ID": "SNOMED",
+                    "CONCEPT_CLASS_ID": "Disorder"
+                  },
+                  "isExcluded": false,
+                  "includeDescendants": false,
+                  "includeMapped": true
+                }
+              ]
+            }
+          },
+          {
+            "id": 2,
+            "name": "Q21.3 ",
+            "expression": {
+              "items": [
+                {
+                  "concept": {
+                    "CONCEPT_ID": 35210803,
+                    "CONCEPT_NAME": "Tetralogy of Fallot",
+                    "STANDARD_CONCEPT": "N",
+                    "STANDARD_CONCEPT_CAPTION": "Non-Standard",
+                    "INVALID_REASON": "V",
+                    "INVALID_REASON_CAPTION": "Valid",
+                    "CONCEPT_CODE": "Q21.3",
+                    "DOMAIN_ID": "Condition",
+                    "VOCABULARY_ID": "ICD10CM",
+                    "CONCEPT_CLASS_ID": "4-char billing code"
+                  },
+                  "isExcluded": false,
+                  "includeDescendants": false,
+                  "includeMapped": true
+                },
+                {
+                  "concept": {
+                    "CONCEPT_ID": 320835,
+                    "CONCEPT_NAME": "Tetralogy of Fallot",
+                    "STANDARD_CONCEPT": "S",
+                    "STANDARD_CONCEPT_CAPTION": "Standard",
+                    "INVALID_REASON": "V",
+                    "INVALID_REASON_CAPTION": "Valid",
+                    "CONCEPT_CODE": "86299006",
+                    "DOMAIN_ID": "Condition",
+                    "VOCABULARY_ID": "SNOMED",
+                    "CONCEPT_CLASS_ID": "Disorder"
+                  },
+                  "isExcluded": false,
+                  "includeDescendants": false,
+                  "includeMapped": true
+                }
+              ]
+            }
+          }
+        ],
+        "QualifiedLimit": {
+          "Type": "First"
+        },
+        "ExpressionLimit": {
+          "Type": "All"
+        },
+        "InclusionRules": [
+          {
+            "name": "6. Tetralogy of Fallot/DORV TOF type",
+            "expression": {
+              "Type": "ANY",
+              "CriteriaList": [
+                {
+                  "Criteria": {
+                    "ConditionOccurrence": {
+                      "CorrelatedCriteria": {
+                        "Type": "ALL",
+                        "CriteriaList": [
+                          {
+                            "Criteria": {
+                              "ConditionOccurrence": {
+                                "CodesetId": 1
+                              }
+                            },
+                            "StartWindow": {
+                              "Start": {
+                                "Coeff": -1
+                              },
+                              "End": {
+                                "Coeff": 1
+                              },
+                              "UseIndexEnd": false,
+                              "UseEventEnd": false
+                            },
+                            "RestrictVisit": false,
+                            "IgnoreObservationPeriod": false,
+                            "Occurrence": {
+                              "Type": 0,
+                              "Count": 0,
+                              "IsDistinct": false
+                            }
+                          }
+                        ],
+                        "DemographicCriteriaList": [],
+                        "Groups": []
+                      },
+                      "CodesetId": 0
+                    }
+                  },
+                  "StartWindow": {
+                    "Start": {
+                      "Coeff": -1
+                    },
+                    "End": {
+                      "Coeff": 1
+                    },
+                    "UseIndexEnd": false,
+                    "UseEventEnd": false
+                  },
+                  "RestrictVisit": false,
+                  "IgnoreObservationPeriod": false,
+                  "Occurrence": {
+                    "Type": 2,
+                    "Count": 1,
+                    "IsDistinct": false
+                  }
+                },
+                {
+                  "Criteria": {
+                    "ConditionOccurrence": {
+                      "CodesetId": 2
+                    }
+                  },
+                  "StartWindow": {
+                    "Start": {
+                      "Coeff": -1
+                    },
+                    "End": {
+                      "Coeff": 1
+                    },
+                    "UseIndexEnd": false,
+                    "UseEventEnd": false
+                  },
+                  "RestrictVisit": false,
+                  "IgnoreObservationPeriod": false,
+                  "Occurrence": {
+                    "Type": 2,
+                    "Count": 1,
+                    "IsDistinct": false
+                  }
+                }
+              ],
+              "DemographicCriteriaList": [],
+              "Groups": []
+            }
+          }
+        ],
+        "CensoringCriteria": [],
+        "CollapseSettings": {
+          "CollapseType": "ERA",
+          "EraPad": 0
+        },
+        "CensorWindow": {}
+      }
+    },
+    {
+      "id": 692,
+      "name": "7. Truncus arteriosus 021025",
+      "expression": {
+        "cdmVersionRange": ">=5.0.0",
+        "PrimaryCriteria": {
+          "CriteriaList": [
+            {
+              "VisitOccurrence": {
+                "VisitTypeExclude": false,
+                "Age": {
+                  "Value": 18,
+                  "Op": "gte"
+                }
+              }
+            }
+          ],
+          "ObservationWindow": {
+            "PriorDays": 0,
+            "PostDays": 0
+          },
+          "PrimaryCriteriaLimit": {
+            "Type": "All"
+          }
+        },
+        "ConceptSets": [
+          {
+            "id": 0,
+            "name": "Q20.0",
+            "expression": {
+              "items": [
+                {
+                  "concept": {
+                    "CONCEPT_ID": 35210791,
+                    "CONCEPT_NAME": "Common arterial trunk",
+                    "STANDARD_CONCEPT": "N",
+                    "STANDARD_CONCEPT_CAPTION": "Non-Standard",
+                    "INVALID_REASON": "V",
+                    "INVALID_REASON_CAPTION": "Valid",
+                    "CONCEPT_CODE": "Q20.0",
+                    "DOMAIN_ID": "Condition",
+                    "VOCABULARY_ID": "ICD10CM",
+                    "CONCEPT_CLASS_ID": "4-char billing code"
+                  },
+                  "isExcluded": false,
+                  "includeDescendants": false,
+                  "includeMapped": true
+                },
+                {
+                  "concept": {
+                    "CONCEPT_ID": 441950,
+                    "CONCEPT_NAME": "Common arterial trunk (truncus arteriosus)",
+                    "STANDARD_CONCEPT": "S",
+                    "STANDARD_CONCEPT_CAPTION": "Standard",
+                    "INVALID_REASON": "V",
+                    "INVALID_REASON_CAPTION": "Valid",
+                    "CONCEPT_CODE": "61959006",
+                    "DOMAIN_ID": "Condition",
+                    "VOCABULARY_ID": "SNOMED",
+                    "CONCEPT_CLASS_ID": "Disorder"
+                  },
+                  "isExcluded": false,
+                  "includeDescendants": false,
+                  "includeMapped": true
+                }
+              ]
+            }
+          }
+        ],
+        "QualifiedLimit": {
+          "Type": "First"
+        },
+        "ExpressionLimit": {
+          "Type": "All"
+        },
+        "InclusionRules": [
+          {
+            "name": "7. Truncus arteriosus",
+            "expression": {
+              "Type": "ANY",
+              "CriteriaList": [
+                {
+                  "Criteria": {
+                    "ConditionOccurrence": {
+                      "CodesetId": 0
+                    }
+                  },
+                  "StartWindow": {
+                    "Start": {
+                      "Coeff": -1
+                    },
+                    "End": {
+                      "Coeff": 1
+                    },
+                    "UseIndexEnd": false,
+                    "UseEventEnd": false
+                  },
+                  "RestrictVisit": false,
+                  "IgnoreObservationPeriod": false,
+                  "Occurrence": {
+                    "Type": 2,
+                    "Count": 1,
+                    "IsDistinct": false
+                  }
+                }
+              ],
+              "DemographicCriteriaList": [],
+              "Groups": []
+            }
+          }
+        ],
+        "CensoringCriteria": [],
+        "CollapseSettings": {
+          "CollapseType": "ERA",
+          "EraPad": 0
+        },
+        "CensorWindow": {}
+      }
+    },
+    {
+      "id": 693,
+      "name": "8. AV Canal defects 021025",
+      "expression": {
+        "cdmVersionRange": ">=5.0.0",
+        "PrimaryCriteria": {
+          "CriteriaList": [
+            {
+              "VisitOccurrence": {
+                "VisitTypeExclude": false,
+                "Age": {
+                  "Value": 18,
+                  "Op": "gte"
+                }
+              }
+            }
+          ],
+          "ObservationWindow": {
+            "PriorDays": 0,
+            "PostDays": 0
+          },
+          "PrimaryCriteriaLimit": {
+            "Type": "All"
+          }
+        },
+        "ConceptSets": [
+          {
+            "id": 0,
+            "name": "Q21.2",
+            "expression": {
+              "items": [
+                {
+                  "concept": {
+                    "CONCEPT_ID": 35210802,
+                    "CONCEPT_NAME": "Atrioventricular septal defect",
+                    "STANDARD_CONCEPT": "N",
+                    "STANDARD_CONCEPT_CAPTION": "Non-Standard",
+                    "INVALID_REASON": "V",
+                    "INVALID_REASON_CAPTION": "Valid",
+                    "CONCEPT_CODE": "Q21.2",
+                    "DOMAIN_ID": "Condition",
+                    "VOCABULARY_ID": "ICD10CM",
+                    "CONCEPT_CLASS_ID": "4-char nonbill code"
+                  },
+                  "isExcluded": false,
+                  "includeDescendants": false,
+                  "includeMapped": true
+                },
+                {
+                  "concept": {
+                    "CONCEPT_ID": 4100152,
+                    "CONCEPT_NAME": "Atrioventricular septal defect and common atrioventricular junction",
+                    "STANDARD_CONCEPT": "S",
+                    "STANDARD_CONCEPT_CAPTION": "Standard",
+                    "INVALID_REASON": "V",
+                    "INVALID_REASON_CAPTION": "Valid",
+                    "CONCEPT_CODE": "253414002",
+                    "DOMAIN_ID": "Condition",
+                    "VOCABULARY_ID": "SNOMED",
+                    "CONCEPT_CLASS_ID": "Disorder"
+                  },
+                  "isExcluded": false,
+                  "includeDescendants": false,
+                  "includeMapped": true
+                }
+              ]
+            }
+          }
+        ],
+        "QualifiedLimit": {
+          "Type": "First"
+        },
+        "ExpressionLimit": {
+          "Type": "All"
+        },
+        "InclusionRules": [
+          {
+            "name": "8. AV Canal defects",
+            "expression": {
+              "Type": "ANY",
+              "CriteriaList": [
+                {
+                  "Criteria": {
+                    "ConditionOccurrence": {
+                      "CodesetId": 0
+                    }
+                  },
+                  "StartWindow": {
+                    "Start": {
+                      "Coeff": -1
+                    },
+                    "End": {
+                      "Coeff": 1
+                    },
+                    "UseIndexEnd": false,
+                    "UseEventEnd": false
+                  },
+                  "RestrictVisit": false,
+                  "IgnoreObservationPeriod": false,
+                  "Occurrence": {
+                    "Type": 2,
+                    "Count": 1,
+                    "IsDistinct": false
+                  }
+                }
+              ],
+              "DemographicCriteriaList": [],
+              "Groups": []
+            }
+          }
+        ],
+        "CensoringCriteria": [],
+        "CollapseSettings": {
+          "CollapseType": "ERA",
+          "EraPad": 0
+        },
+        "CensorWindow": {}
+      }
+    },
+    {
+      "id": 694,
+      "name": "9. Ebsteins anomaly 021025",
+      "expression": {
+        "cdmVersionRange": ">=5.0.0",
+        "PrimaryCriteria": {
+          "CriteriaList": [
+            {
+              "VisitOccurrence": {
+                "VisitTypeExclude": false,
+                "Age": {
+                  "Value": 18,
+                  "Op": "gte"
+                }
+              }
+            }
+          ],
+          "ObservationWindow": {
+            "PriorDays": 0,
+            "PostDays": 0
+          },
+          "PrimaryCriteriaLimit": {
+            "Type": "All"
+          }
+        },
+        "ConceptSets": [
+          {
+            "id": 0,
+            "name": "Q22.5",
+            "expression": {
+              "items": [
+                {
+                  "concept": {
+                    "CONCEPT_ID": 35210812,
+                    "CONCEPT_NAME": "Ebstein's anomaly",
+                    "STANDARD_CONCEPT": "N",
+                    "STANDARD_CONCEPT_CAPTION": "Non-Standard",
+                    "INVALID_REASON": "V",
+                    "INVALID_REASON_CAPTION": "Valid",
+                    "CONCEPT_CODE": "Q22.5",
+                    "DOMAIN_ID": "Condition",
+                    "VOCABULARY_ID": "ICD10CM",
+                    "CONCEPT_CLASS_ID": "4-char billing code"
+                  },
+                  "isExcluded": false,
+                  "includeDescendants": false,
+                  "includeMapped": true
+                },
+                {
+                  "concept": {
+                    "CONCEPT_ID": 4069182,
+                    "CONCEPT_NAME": "Ebstein's anomaly",
+                    "STANDARD_CONCEPT": "S",
+                    "STANDARD_CONCEPT_CAPTION": "Standard",
+                    "INVALID_REASON": "V",
+                    "INVALID_REASON_CAPTION": "Valid",
+                    "CONCEPT_CODE": "204357006",
+                    "DOMAIN_ID": "Condition",
+                    "VOCABULARY_ID": "SNOMED",
+                    "CONCEPT_CLASS_ID": "Disorder"
+                  },
+                  "isExcluded": false,
+                  "includeDescendants": false,
+                  "includeMapped": true
+                }
+              ]
+            }
+          }
+        ],
+        "QualifiedLimit": {
+          "Type": "First"
+        },
+        "ExpressionLimit": {
+          "Type": "All"
+        },
+        "InclusionRules": [
+          {
+            "name": "9. Ebsteins anomaly",
+            "expression": {
+              "Type": "ANY",
+              "CriteriaList": [
+                {
+                  "Criteria": {
+                    "ConditionOccurrence": {
+                      "CodesetId": 0
+                    }
+                  },
+                  "StartWindow": {
+                    "Start": {
+                      "Coeff": -1
+                    },
+                    "End": {
+                      "Coeff": 1
+                    },
+                    "UseIndexEnd": false,
+                    "UseEventEnd": false
+                  },
+                  "RestrictVisit": false,
+                  "IgnoreObservationPeriod": false,
+                  "Occurrence": {
+                    "Type": 2,
+                    "Count": 1,
+                    "IsDistinct": false
+                  }
+                }
+              ],
+              "DemographicCriteriaList": [],
+              "Groups": []
+            }
+          }
+        ],
+        "CensoringCriteria": [],
+        "CollapseSettings": {
+          "CollapseType": "ERA",
+          "EraPad": 0
+        },
+        "CensorWindow": {}
+      }
+    },
+    {
+      "id": 695,
+      "name": "10. Shone Complex 021025",
+      "expression": {
+        "cdmVersionRange": ">=5.0.0",
+        "PrimaryCriteria": {
+          "CriteriaList": [
+            {
+              "VisitOccurrence": {
+                "VisitTypeExclude": false,
+                "Age": {
+                  "Value": 18,
+                  "Op": "gte"
+                }
+              }
+            }
+          ],
+          "ObservationWindow": {
+            "PriorDays": 0,
+            "PostDays": 0
+          },
+          "PrimaryCriteriaLimit": {
+            "Type": "All"
+          }
+        },
+        "ConceptSets": [
+          {
+            "id": 0,
+            "name": "Q23.2",
+            "expression": {
+              "items": [
+                {
+                  "concept": {
+                    "CONCEPT_ID": 35210818,
+                    "CONCEPT_NAME": "Congenital mitral stenosis",
+                    "STANDARD_CONCEPT": "N",
+                    "STANDARD_CONCEPT_CAPTION": "Non-Standard",
+                    "INVALID_REASON": "V",
+                    "INVALID_REASON_CAPTION": "Valid",
+                    "CONCEPT_CODE": "Q23.2",
+                    "DOMAIN_ID": "Condition",
+                    "VOCABULARY_ID": "ICD10CM",
+                    "CONCEPT_CLASS_ID": "4-char billing code"
+                  },
+                  "isExcluded": false,
+                  "includeDescendants": false,
+                  "includeMapped": true
+                },
+                {
+                  "concept": {
+                    "CONCEPT_ID": 313006,
+                    "CONCEPT_NAME": "Congenital stenosis of mitral valve",
+                    "STANDARD_CONCEPT": "S",
+                    "STANDARD_CONCEPT_CAPTION": "Standard",
+                    "INVALID_REASON": "V",
+                    "INVALID_REASON_CAPTION": "Valid",
+                    "CONCEPT_CODE": "82458004",
+                    "DOMAIN_ID": "Condition",
+                    "VOCABULARY_ID": "SNOMED",
+                    "CONCEPT_CLASS_ID": "Disorder"
+                  },
+                  "isExcluded": false,
+                  "includeDescendants": false,
+                  "includeMapped": true
+                }
+              ]
+            }
+          },
+          {
+            "id": 1,
+            "name": "[(Q25.1 or Q25.2) or (Q23.0 or Q24.4 or Q25.3)] ",
+            "expression": {
+              "items": [
+                {
+                  "concept": {
+                    "CONCEPT_ID": 35210834,
+                    "CONCEPT_NAME": "Atresia of aorta",
+                    "STANDARD_CONCEPT": "N",
+                    "STANDARD_CONCEPT_CAPTION": "Non-Standard",
+                    "INVALID_REASON": "V",
+                    "INVALID_REASON_CAPTION": "Valid",
+                    "CONCEPT_CODE": "Q25.2",
+                    "DOMAIN_ID": "Condition",
+                    "VOCABULARY_ID": "ICD10CM",
+                    "CONCEPT_CLASS_ID": "4-char nonbill code"
+                  },
+                  "isExcluded": false,
+                  "includeDescendants": false,
+                  "includeMapped": true
+                },
+                {
+                  "concept": {
+                    "CONCEPT_ID": 35210833,
+                    "CONCEPT_NAME": "Coarctation of aorta",
+                    "STANDARD_CONCEPT": "N",
+                    "STANDARD_CONCEPT_CAPTION": "Non-Standard",
+                    "INVALID_REASON": "V",
+                    "INVALID_REASON_CAPTION": "Valid",
+                    "CONCEPT_CODE": "Q25.1",
+                    "DOMAIN_ID": "Condition",
+                    "VOCABULARY_ID": "ICD10CM",
+                    "CONCEPT_CLASS_ID": "4-char billing code"
+                  },
+                  "isExcluded": false,
+                  "includeDescendants": false,
+                  "includeMapped": true
+                },
+                {
+                  "concept": {
+                    "CONCEPT_ID": 35210816,
+                    "CONCEPT_NAME": "Congenital stenosis of aortic valve",
+                    "STANDARD_CONCEPT": "N",
+                    "STANDARD_CONCEPT_CAPTION": "Non-Standard",
+                    "INVALID_REASON": "V",
+                    "INVALID_REASON_CAPTION": "Valid",
+                    "CONCEPT_CODE": "Q23.0",
+                    "DOMAIN_ID": "Condition",
+                    "VOCABULARY_ID": "ICD10CM",
+                    "CONCEPT_CLASS_ID": "4-char billing code"
+                  },
+                  "isExcluded": false,
+                  "includeDescendants": false,
+                  "includeMapped": true
+                },
+                {
+                  "concept": {
+                    "CONCEPT_ID": 35210827,
+                    "CONCEPT_NAME": "Congenital subaortic stenosis",
+                    "STANDARD_CONCEPT": "N",
+                    "STANDARD_CONCEPT_CAPTION": "Non-Standard",
+                    "INVALID_REASON": "V",
+                    "INVALID_REASON_CAPTION": "Valid",
+                    "CONCEPT_CODE": "Q24.4",
+                    "DOMAIN_ID": "Condition",
+                    "VOCABULARY_ID": "ICD10CM",
+                    "CONCEPT_CLASS_ID": "4-char billing code"
+                  },
+                  "isExcluded": false,
+                  "includeDescendants": false,
+                  "includeMapped": true
+                },
+                {
+                  "concept": {
+                    "CONCEPT_ID": 35210835,
+                    "CONCEPT_NAME": "Supravalvular aortic stenosis",
+                    "STANDARD_CONCEPT": "N",
+                    "STANDARD_CONCEPT_CAPTION": "Non-Standard",
+                    "INVALID_REASON": "V",
+                    "INVALID_REASON_CAPTION": "Valid",
+                    "CONCEPT_CODE": "Q25.3",
+                    "DOMAIN_ID": "Condition",
+                    "VOCABULARY_ID": "ICD10CM",
+                    "CONCEPT_CLASS_ID": "4-char billing code"
+                  },
+                  "isExcluded": false,
+                  "includeDescendants": false,
+                  "includeMapped": true
+                },
+                {
+                  "concept": {
+                    "CONCEPT_ID": 321119,
+                    "CONCEPT_NAME": "Coarctation of aorta",
+                    "STANDARD_CONCEPT": "S",
+                    "STANDARD_CONCEPT_CAPTION": "Standard",
+                    "INVALID_REASON": "V",
+                    "INVALID_REASON_CAPTION": "Valid",
+                    "CONCEPT_CODE": "7305005",
+                    "DOMAIN_ID": "Condition",
+                    "VOCABULARY_ID": "SNOMED",
+                    "CONCEPT_CLASS_ID": "Disorder"
+                  },
+                  "isExcluded": false,
+                  "includeDescendants": false,
+                  "includeMapped": true
+                },
+                {
+                  "concept": {
+                    "CONCEPT_ID": 4253808,
+                    "CONCEPT_NAME": "Congenital atresia of aorta",
+                    "STANDARD_CONCEPT": "S",
+                    "STANDARD_CONCEPT_CAPTION": "Standard",
+                    "INVALID_REASON": "V",
+                    "INVALID_REASON_CAPTION": "Valid",
+                    "CONCEPT_CODE": "7438000",
+                    "DOMAIN_ID": "Condition",
+                    "VOCABULARY_ID": "SNOMED",
+                    "CONCEPT_CLASS_ID": "Disorder"
+                  },
+                  "isExcluded": false,
+                  "includeDescendants": false,
+                  "includeMapped": true
+                },
+                {
+                  "concept": {
+                    "CONCEPT_ID": 314457,
+                    "CONCEPT_NAME": "Congenital stenosis of aortic valve",
+                    "STANDARD_CONCEPT": "S",
+                    "STANDARD_CONCEPT_CAPTION": "Standard",
+                    "INVALID_REASON": "V",
+                    "INVALID_REASON_CAPTION": "Valid",
+                    "CONCEPT_CODE": "18546004",
+                    "DOMAIN_ID": "Condition",
+                    "VOCABULARY_ID": "SNOMED",
+                    "CONCEPT_CLASS_ID": "Disorder"
+                  },
+                  "isExcluded": false,
+                  "includeDescendants": false,
+                  "includeMapped": true
+                },
+                {
+                  "concept": {
+                    "CONCEPT_ID": 259123,
+                    "CONCEPT_NAME": "Congenital subaortic stenosis",
+                    "STANDARD_CONCEPT": "S",
+                    "STANDARD_CONCEPT_CAPTION": "Standard",
+                    "INVALID_REASON": "V",
+                    "INVALID_REASON_CAPTION": "Valid",
+                    "CONCEPT_CODE": "73660006",
+                    "DOMAIN_ID": "Condition",
+                    "VOCABULARY_ID": "SNOMED",
+                    "CONCEPT_CLASS_ID": "Disorder"
+                  },
+                  "isExcluded": false,
+                  "includeDescendants": false,
+                  "includeMapped": true
+                },
+                {
+                  "concept": {
+                    "CONCEPT_ID": 4147787,
+                    "CONCEPT_NAME": "Supravalvar aortic stenosis",
+                    "STANDARD_CONCEPT": "S",
+                    "STANDARD_CONCEPT_CAPTION": "Standard",
+                    "INVALID_REASON": "V",
+                    "INVALID_REASON_CAPTION": "Valid",
+                    "CONCEPT_CODE": "268185002",
+                    "DOMAIN_ID": "Condition",
+                    "VOCABULARY_ID": "SNOMED",
+                    "CONCEPT_CLASS_ID": "Disorder"
+                  },
+                  "isExcluded": false,
+                  "includeDescendants": false,
+                  "includeMapped": true
+                }
+              ]
+            }
+          }
+        ],
+        "QualifiedLimit": {
+          "Type": "First"
+        },
+        "ExpressionLimit": {
+          "Type": "All"
+        },
+        "InclusionRules": [
+          {
+            "name": "10. Shone Complex",
+            "expression": {
+              "Type": "ALL",
+              "CriteriaList": [
+                {
+                  "Criteria": {
+                    "ConditionOccurrence": {
+                      "CodesetId": 0
+                    }
+                  },
+                  "StartWindow": {
+                    "Start": {
+                      "Coeff": -1
+                    },
+                    "End": {
+                      "Coeff": 1
+                    },
+                    "UseIndexEnd": false,
+                    "UseEventEnd": false
+                  },
+                  "RestrictVisit": false,
+                  "IgnoreObservationPeriod": false,
+                  "Occurrence": {
+                    "Type": 2,
+                    "Count": 1,
+                    "IsDistinct": false
+                  }
+                },
+                {
+                  "Criteria": {
+                    "ConditionOccurrence": {
+                      "CodesetId": 1
+                    }
+                  },
+                  "StartWindow": {
+                    "Start": {
+                      "Coeff": -1
+                    },
+                    "End": {
+                      "Coeff": 1
+                    },
+                    "UseIndexEnd": false,
+                    "UseEventEnd": false
+                  },
+                  "RestrictVisit": false,
+                  "IgnoreObservationPeriod": false,
+                  "Occurrence": {
+                    "Type": 2,
+                    "Count": 1,
+                    "IsDistinct": false
+                  }
+                }
+              ],
+              "DemographicCriteriaList": [],
+              "Groups": []
+            }
+          }
+        ],
+        "CensoringCriteria": [],
+        "CollapseSettings": {
+          "CollapseType": "ERA",
+          "EraPad": 0
+        },
+        "CensorWindow": {}
+      }
+    }
+  ],
+  "featureAnalyses": [],
+  "parameters": [],
+  "stratas": [],
+  "strataOnly": false,
+  "strataConceptSets": [],
+  "skeletonType": "CohortCharacterizationStudy",
+  "skeletonVersion": "v0.0.1",
+  "organizationName": "OHDSI"
+}
